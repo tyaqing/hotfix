@@ -14,7 +14,7 @@
 然后加载使用.
 
 ```js
-import { checkUpdate } from "./utils/update";
+import { checkUpdate } from "./utils/hotfix";
 checkUpdate(URL); // 填入您检查api的url地址
 ```
 
@@ -26,7 +26,7 @@ checkUpdate(URL); // 填入您检查api的url地址
 <title>APP</title>
 <script src="html5plus://ready"></script>  // 这段必须加载title底下
 ....
-<script src="path/update-bs.js"></script>
+<script src="path/hotfix-bs.js"></script>
 <script>
   checkUpdate('https://api.hotfix.femirror.com/public/app/checkUpdate?bundleId=你的appId'); // 填入您检查api的url地址
 </script>
