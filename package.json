@@ -1,0 +1,20 @@
+{
+  "name": "h5plus-hotfix",
+  "version": "1.0.0",
+  "description": "让您的Hbuilder APP应用快速拥有更新能力.",
+  "main": "src/hotfix.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyaqing/hotfix.git"
+  },
+  "keywords": [],
+  "author": "ArH<626019610@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyaqing/hotfix/issues"
+  },
+  "homepage": "https://github.com/tyaqing/hotfix#readme"
+}
