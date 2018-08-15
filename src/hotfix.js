@@ -1,4 +1,10 @@
 export default function ({ url, success, error, before, onProgress }) {
+  // 参数验证
+  if (!(url && typeof url === 'string')) throw "url 必须填写 类型为string";
+  if (!(success && typeof success === 'function')) throw "success必须填写 类型为function";
+  if (!(before && typeof before === 'function')) throw "before必须填写 类型为function"
+  if (!onProgress) onProgress = function () { };
+  if (!error) error = function () { };
   // 对环境的要求
   let resData;
   getProperty().then((inf) => {

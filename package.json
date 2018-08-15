@@ -1,6 +1,6 @@
 {
   "name": "h5plus-hotfix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "让您的Hbuilder APP应用快速拥有更新能力.",
   "main": "src/hotfix.js",
   "scripts": {
