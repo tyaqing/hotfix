@@ -3,8 +3,6 @@ export default function ({ url, success, error, before, onProgress }) {
   if (!(url && typeof url === 'string')) throw "url 必须填写 类型为string";
   if (!(success && typeof success === 'function')) throw "success必须填写 类型为function";
   if (!(before && typeof before === 'function')) throw "before必须填写 类型为function"
-  if (!onProgress) onProgress = function () { };
-  if (!error) error = function () { };
   // 对环境的要求
   let resData;
   getProperty().then((inf) => {
@@ -26,7 +24,9 @@ export default function ({ url, success, error, before, onProgress }) {
       return installWgt(localPath);
     }).then(() => {
       success();
-    }).catch(error)
+    }).catch((e) => {
+      error && error()
+    })
 }
 // 下载wgt文件
 function downWgt(url, onProgress) {
@@ -42,7 +42,7 @@ function downWgt(url, onProgress) {
         }
       })
     dtask.addEventListener("statechanged", function (task, status) {
-      onProgress(Number.parseInt(task.downloadedSize / task.totalSize * 100));
+      onProgress && onProgress(Number.parseInt(task.downloadedSize / task.totalSize * 100));
     });
     dtask.start();
   })
