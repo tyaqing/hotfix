@@ -3,4 +3,9 @@
 
 ## [演示APK](https://fir.im/p52j)
 
+# 推荐
+
+
 ## 开发Hbuilder应用 推荐使用[MogoH5+](https://github.com/tyaqing/mogo-h5plus)
+
+`Hbuilder`是基于`vue`的开发脚手架
